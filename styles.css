@@ -1,155 +1,213 @@
- 
- 
+ /*---------------Barra de navegaçao------------------*/
+
+ html,
+ body {
+   font-family: Arial, Helvetica, sans-serif;
+   height: 100%;
+   margin: 0;
+ }
+
+ nav {
+   overflow: hidden;
+   background-color: #0f2972;
+   opacity: 0.;
+ }
+
+ nav a {
+   float: left;
+   font-size: 16px;
+   color: rgb(189, 91, 11);
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+ }
+
+ .dropdown {
+   float: left;
+   overflow: hidden;
+ }
+
+ .dropdown .dropbtn {
+   font-size: 16px;
+   border: none;
+   outline: none;
+   color: rgb(189, 91, 11);
+   padding: 14px 16px;
+   background-color: inherit;
+   font-family: inherit;
+   margin: 0;
+ }
+
+ nav a:hover,
+ .dropdown:hover .dropbtn {
+   background-color: rgb(116, 228, 105);
+ }
+
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+ }
+
+ .dropdown-content a {
+   float: none;
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+ }
+
+ .dropdown-content a:hover {
+   background-color: #f7f7f7;
+ }
+
+ .dropdown:hover .dropdown-content {
+   display: block;
+ }
+
+ /*---------------Barra de navegaçao------------------*/
 
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  nav {
-    overflow: hidden;
-    background-color: #0f2972;
-  }
-  
-  nav a {
-    float: left;
-    font-size: 16px;
-    color: rgb(189, 91, 11);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: rgb(189, 91, 11);
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-  
-  nav a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f7f7f7;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+ /*---------------Seccao Home Imagem de fundo------------------*/
+ .imagem {
+   background-image: url(/imagens/imagemArvore.jpeg);
+   min-height: 100%;
+   width: 100%;
+   background-position: center center;
+ }
 
-  *{
-    margin:0;
-    padding:0;
-}
+ .contentor>* {
+   background-image: url(imagens/imagemFolhas.jpeg);
+   border: 1px solid black;
+   padding: 1px;
+   font-size: 2rem;
+ }
 
-body{
-    background-color: #555;
-    min-width: 100vh;
-    justify-content: center;
-    align-items:center;
-}
+ .heading {
+   background-image: url(/imagens/imagemVale.jpeg);
+   font-family: Arial, Helvetica, sans-serif;
+   color: #f7f7f7;
+   padding: 3px 0;
+   text-align: center;
+ }
 
-.capitais{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap ;
-}
+ /*---------------Seccao Home Imagem de fundo------------------*/
 
-/*card*/
-.cidade{
-    width: 300px;
-    height: 460px;
-    margin: 25px;
-    background-color: #f7f7f7;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 
-}
+ /*---------------Seccao Home------------------*/
+ .boxFrase {
+   position: relative;
+   top: 10vw;
+   left: 15vw;
+   width: 1000px;
+   height: 150px;
+   border: 3px solid rgb(255, 0, 242);
+   overflow: hidden;
+   padding: 12px;
+   font-family: monospace;
+   font-size: 18px;
+   color: aqua;
+   background-image: url(/imagens/imagemFolhas.jpeg);
+ }
 
-/*card header*/
+ /*---------------Seccao Home------------------*/
 
-.cidade-header
-{
-width: 100%;
-height: 200px;
-overflow: hidden;
-}
 
-.cidade-img  {
-    min-width: 100%;
-    width: auto;
-    width: 100%;
-}
 
-.cidade-body{
-    height: 170px;
-    padding: 15px;
-    text-align: center;
-    font-family: sans-serif;
-}
+ /*---------------Media queries------------------*/
+ @media (max-width:600px) {
+   div.contentor {
+     height: 900px;
+     background-image: url(imagens/imagemArvore.jpeg);
+   }
 
-.cidade-local{
-    font-size: 16px;
-    margin: 10px 0;
-}
+   .boxFrase {
+     height: 150px;
+     width: 300px;
+     font-family: monospace;
+     font-size: 8px;
+     color: greenyellow;
+     grid-template-columns: auto;
+   }
+ }
 
-.cidade-titulo{
-    font-size: 32px;
-    margin: 15px 0;
-}
+ /*---------------Media queries------------------*/
 
-.cidade-texto{
-    font-size: 12px;
-    width: 250px;
-    margin: 0 auto;
+ /*---------------Paralax------------------*/
+ div.parallax {
+   margin: 30px;
+   border: 3px solid black;
+ }
 
-}
+ .parallax {
+   background-image: url("/imagens/bong.jpg");
+   min-height: 300px;
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
 
-/* card footer*/
+ .parallax2 {
+   background-image: url("/imagens/IMG_2469.JPG");
+   width: 400px;
+   height: 400px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   transition: width 2s;
+   margin: 30px;
+ }
 
-.cidade-footer{
-    margin-top: 10px;
-    text-align: center;
-    background-color: black;
+ .parallax2:hover {
+   width: 100%;
+ }
 
-}
+ .parallax3 {
+   background-image: url("/imagens/IMG_2469.JPG");
+   min-height: 200px;
+   background-position: bottom;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
 
-.cidade-footer a {
-    color: #f9f9f9;
-    display: block;
-    padding: 16px;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: 600;
-}
+ b {
+   color: dodgerblue;
+ }
+
+ .h1Parallax {
+   text-align: center;
+   letter-spacing: 20px;
+   color: purple;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: larger;
+ }
+
+ .txtP {
+   text-align: center;
+   padding: 15px;
+   font-size: larger;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ .txtP2 {
+   text-align: center;
+   padding: 15px;
+   font-size: larger;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ .txtP3 {
+   text-align: center;
+   padding: 15px;
+   font-size: larger;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+
+
+ /*---------------Paralax------------------*/
